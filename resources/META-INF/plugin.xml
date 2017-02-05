@@ -24,7 +24,8 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <fileTypeFactory implementation="edu.illinois.cs.cogcomp.ideaplugin.LBJavaFileTypeFactory"/>
+    <fileTypeFactory implementation="edu.illinois.cs.cogcomp.ideaplugin.fileTypes.LBJavaFileTypeFactory"/>
+    <lang.syntaxHighlighterFactory key="LBJava" implementationClass="edu.illinois.cs.cogcomp.ideaplugin.fileTypes.LBJavaSyntaxHighlighterFactory"/>
   </extensions>
 
   <actions>

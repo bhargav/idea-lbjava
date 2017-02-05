@@ -1,7 +1,8 @@
-package edu.illinois.cs.cogcomp.ideaplugin;
+package edu.illinois.cs.cogcomp.ideaplugin.fileTypes;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import com.intellij.openapi.util.IconLoader;
+import edu.illinois.cs.cogcomp.ideaplugin.LBJavaLanguage;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

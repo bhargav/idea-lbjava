@@ -1,4 +1,4 @@
-package edu.illinois.cs.cogcomp.ideaplugin;
+package edu.illinois.cs.cogcomp.ideaplugin.fileTypes;
 
 import com.intellij.openapi.fileTypes.FileTypeConsumer;
 import com.intellij.openapi.fileTypes.FileTypeFactory;
