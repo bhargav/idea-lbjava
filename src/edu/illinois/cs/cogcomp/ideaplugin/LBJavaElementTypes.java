@@ -42,6 +42,8 @@ public interface LBJavaElementTypes {
     IElementType SUBJECTTO = new LBJavaElementType("SUBJECTTO");
     IElementType TESTFROM = new LBJavaElementType("TESTFROM");
     IElementType TESTINGMETRIC = new LBJavaElementType("TESTINGMETRIC");
+    IElementType USING = new LBJavaElementType("USING");
+
     IElementType LBRACEBRACE = new LBJavaElementType("LBRACEBRACE");
     IElementType RBRACEBRACE = new LBJavaElementType("RBRACEBRACE");
     IElementType DOTDOT = new LBJavaElementType("DOTDOT");

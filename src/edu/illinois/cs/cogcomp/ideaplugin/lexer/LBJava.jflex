@@ -24,11 +24,12 @@ package edu.illinois.cs.cogcomp.ideaplugin.lexer;
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.JavaTokenType;
+import com.intellij.psi.TokenType;
 import edu.illinois.cs.cogcomp.ideaplugin.LBJavaElementTypes;
 
 %%
 
-%class _JFlexLexer
+%class _LBJavaLexer
 %implements FlexLexer
 %final
 %unicode
@@ -39,6 +40,23 @@ import edu.illinois.cs.cogcomp.ideaplugin.LBJavaElementTypes;
 
 
 %{
+  public final int getTokenStart(){
+    return zzStartRead;
+  }
+
+  public final int getTokenEnd(){
+    return getTokenStart() + yylength();
+  }
+
+  public void reset(CharSequence buffer, int start, int end,int initialState){
+    zzBuffer = com.intellij.util.text.CharArrayUtil.fromSequenceWithoutCopying(buffer);
+    zzCurrentPos = zzMarkedPos = zzStartRead = start;
+    zzAtEOF  = false;
+    zzAtBOL = true;
+    zzEndRead = end;
+    yybegin(initialState);
+  }
+
   // Declarations for variables, subroutines, etc. accessible to all
   // scanner actions.
   public String sourceFilename;  
@@ -608,7 +626,7 @@ COMMENT_TEXT=([^/*]|("*")+[^/*]|"/"[^*])*
 
 <YYINITIAL> "using"
 {
-  return JavaTokenType.USING_KEYWORD;
+  return LBJavaElementTypes.USING;
 }
 
 <YYINITIAL> "void"
@@ -634,13 +652,13 @@ COMMENT_TEXT=([^/*]|("*")+[^/*]|"/"[^*])*
 
 <YYINITIAL> {ALPHA}({ALPHA_NUMERIC})*
 {
-  return LBJavaElementTypes.IDENTIFIER;
+  return JavaTokenType.IDENTIFIER;
 }
 
 
 <YYINITIAL> ";"
 { 
-  return JavaTokenType.SEMICOLON_KEYWORD;
+  return JavaTokenType.SEMICOLON;
 } 
 
 <YYINITIAL> "("
@@ -701,7 +719,7 @@ COMMENT_TEXT=([^/*]|("*")+[^/*]|"/"[^*])*
 
 <YYINITIAL> "*"
 { 
-  return JavaTokenType.ASTERISK;;
+  return JavaTokenType.ASTERISK;
 } 
 
 <YYINITIAL> "/"
