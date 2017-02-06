@@ -40,23 +40,6 @@ import edu.illinois.cs.cogcomp.ideaplugin.LBJavaElementTypes;
 
 
 %{
-  public final int getTokenStart(){
-    return zzStartRead;
-  }
-
-  public final int getTokenEnd(){
-    return getTokenStart() + yylength();
-  }
-
-  public void reset(CharSequence buffer, int start, int end,int initialState){
-    zzBuffer = com.intellij.util.text.CharArrayUtil.fromSequenceWithoutCopying(buffer);
-    zzCurrentPos = zzMarkedPos = zzStartRead = start;
-    zzAtEOF  = false;
-    zzAtBOL = true;
-    zzEndRead = end;
-    yybegin(initialState);
-  }
-
   // Declarations for variables, subroutines, etc. accessible to all
   // scanner actions.
   public String sourceFilename;  
