@@ -10,7 +10,6 @@ public interface LBJavaElementTypes {
     IElementType ALPHA = new LBJavaElementType("ALPHA");
     IElementType ATLEAST = new LBJavaElementType("ATLEAST");
     IElementType ATMOST = new LBJavaElementType("ATMOST");
-    IElementType BYTE = new LBJavaElementType("BYTE");
     IElementType CACHED = new LBJavaElementType("CACHED");
     IElementType CACHEDIN = new LBJavaElementType("CACHEDIN");
     IElementType CACHEDINMAP = new LBJavaElementType("CACHEDINMAP");

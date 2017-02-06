@@ -46,11 +46,6 @@ import edu.illinois.cs.cogcomp.ideaplugin.LBJavaElementTypes;
   private int comment_nest = 0;
 %}
 
-
-
-%line  // Make the "yyline" (line number in file) and "yychar" (byte offset in
-%char  // file) variables available to the scanner actions.
-
 %state BLOCK_COMMENT, LINE_COMMENT, JAVADOC_COMMENT
 
 %{
