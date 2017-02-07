@@ -1,15 +1,15 @@
 <idea-plugin version="2">
-  <id>com.your.company.unique.plugin.id</id>
+  <id>edu.illinois.cs.cogcomp.ideaplugin</id>
   <name>LBJava IDEA plugin</name>
-  <version>0.1</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <version>0.0.1-alpha</version>
+  <vendor>Bhargav Mangipudi</vendor>
 
   <description><![CDATA[
       LBJava language plugin for IntelliJ-IDEA
     ]]></description>
 
   <change-notes><![CDATA[
-      Initial version.
+      0.0.1-alpha - Initial version.
     ]]>
   </change-notes>
 
@@ -18,14 +18,12 @@
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
-  <!-- uncomment to enable plugin in all products
   <depends>com.intellij.modules.lang</depends>
-  -->
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
     <fileTypeFactory implementation="edu.illinois.cs.cogcomp.ideaplugin.fileTypes.LBJavaFileTypeFactory"/>
-    <lang.syntaxHighlighterFactory key="LBJava" implementationClass="edu.illinois.cs.cogcomp.ideaplugin.fileTypes.LBJavaSyntaxHighlighterFactory"/>
+    <lang.syntaxHighlighterFactory language="LBJava" implementationClass="edu.illinois.cs.cogcomp.ideaplugin.fileTypes.LBJavaSyntaxHighlighterFactory"/>
   </extensions>
 
   <actions>

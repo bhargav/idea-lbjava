@@ -40,7 +40,6 @@ public class LBJavaFileType extends LanguageFileType {
     @Nullable
     @Override
     public Icon getIcon() {
-        // TODO - Add Icon
-        return IconLoader.getIcon("/cogcomp.png");
+        return IconLoader.getIcon("/lbjava.png");
     }
 }
