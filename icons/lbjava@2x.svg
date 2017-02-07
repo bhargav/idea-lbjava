@@ -1,0 +1,14 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <title>lbjava@2x</title>
+    <g>
+        <g>
+            <polygon points="12 0 4 8 12 8 12 0" fill="#9aa7b0" opacity="0.7" style="isolation: isolate"/>
+            <rect x="2" y="18" width="30" height="14" fill="#f26522" opacity="0.6"/>
+            <polygon points="14 0 14 8 14 10 12 10 4 10 4 16 26 16 26 0 14 0" fill="#9aa7b0" opacity="0.7" style="isolation: isolate"/>
+        </g>
+        <text x="4.46316" y="30.00826"
+              style="font-family: Arial; font-size: 14px; fill: #231f20; opacity: 0.7">
+            LBJ
+        </text>
+    </g>
+</svg>
